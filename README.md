@@ -1,8 +1,4 @@
-# freephdlabor
-
-<p align="center">
-  <strong>A Modular and Dynamic Multiagent Framework for Autonomous Scientific Research</strong>
-</p>
+# `freephdlabor`: customizing your own research lab to do scientific research in your field 24/7
 
 <p align="center">
   <a href="https://github.com/ltjed/freephdlabor">
@@ -11,8 +7,8 @@
   <a href="https://github.com/ltjed/freephdlabor">
     <img src="https://img.shields.io/github/stars/ltjed/freephdlabor?style=for-the-badge" alt="GitHub Stars">
   </a>
-  <a href="https://github.com/ltjed/freephdlabor/blob/main/TR/technical_report/paper.pdf">
-    <img src="https://img.shields.io/badge/Paper-Technical_Report-blue?style=for-the-badge&logo=arxiv" alt="Technical Report">
+  <a href="https://arxiv.org/abs/2510.15624">
+    <img src="https://img.shields.io/badge/arXiv-2510.15624-b31b1b?style=for-the-badge&logo=arxiv" alt="arXiv">
   </a>
   <a href="https://github.com/ltjed/freephdlabor/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
@@ -40,11 +36,9 @@
 Watch how freephdlabor transforms a research idea into a complete paper:
 
 <p align="center">
-  <a href="assets/preview.mp4">
-    <img src="assets/features.png" alt="Click to watch demo video" width="700">
+  <a href="https://www.youtube.com/watch?v=xwG7dpUtues">
+    <img src="https://img.youtube.com/vi/xwG7dpUtues/maxresdefault.jpg" alt="Watch demo video" width="700">
   </a>
-  <br>
-  <em>👆 Click the image above to watch the demo video</em>
 </p>
 
 ### What Makes It Different

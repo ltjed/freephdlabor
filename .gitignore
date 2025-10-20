@@ -1,3 +1,7 @@
+.env
+logs/
+results/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -22,6 +26,7 @@ venv/
 .cache/
 cache/
 huggingface/
+
 
 
 # Temporary files
