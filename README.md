@@ -40,9 +40,11 @@
 Watch how freephdlabor transforms a research idea into a complete paper:
 
 <p align="center">
-  <video width="700" controls>
-    <source src="assets/preview.mp4" type="video/mp4">
-  </video>
+  <a href="assets/preview.mp4">
+    <img src="assets/features.png" alt="Click to watch demo video" width="700">
+  </a>
+  <br>
+  <em>👆 Click the image above to watch the demo video</em>
 </p>
 
 ### What Makes It Different

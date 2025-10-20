@@ -7,7 +7,6 @@ __pycache__/
 .pytest_cache/
 
 # Virtual environments
-.env
 .venv/
 env/
 venv/
@@ -20,8 +19,6 @@ venv/
 .DS_Store
 
 # Project-specific
-logs/
-results/
 .cache/
 cache/
 huggingface/
