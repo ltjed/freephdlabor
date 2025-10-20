@@ -1,11 +1,8 @@
 # `freephdlabor`: customizing your own research lab to do scientific research in your field 24/7
 
 <p align="center">
-  <a href="https://github.com/ltjed/freephdlabor">
-    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub Repository">
-  </a>
-  <a href="https://github.com/ltjed/freephdlabor">
-    <img src="https://img.shields.io/github/stars/ltjed/freephdlabor?style=for-the-badge" alt="GitHub Stars">
+  <a href="https://freephdlabor.github.io">
+    <img src="https://img.shields.io/badge/Blog-GitHub_Pages-222?style=for-the-badge&logo=github" alt="Blog">
   </a>
   <a href="https://arxiv.org/abs/2510.15624">
     <img src="https://img.shields.io/badge/arXiv-2510.15624-b31b1b?style=for-the-badge&logo=arxiv" alt="arXiv">
