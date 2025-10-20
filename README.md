@@ -30,7 +30,7 @@
 
 ### See It In Action
 
-https://github.com/ltjed/freephdlabor/assets/preview.mp4
+https://github.com/ltjed/freephdlabor/raw/main/assets/preview.mp4
 
 *[Watch the full 6-minute demo on YouTube](https://www.youtube.com/watch?v=xwG7dpUtues)*
 
