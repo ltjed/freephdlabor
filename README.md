@@ -30,11 +30,9 @@
 
 ### See It In Action
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=xwG7dpUtues">
-    <img src="https://img.youtube.com/vi/xwG7dpUtues/maxresdefault.jpg" alt="Watch demo video" width="700">
-  </a>
-</p>
+https://github.com/user-attachments/assets/d07f551f-a749-4235-ad0c-2e10367236d0
+
+*[Watch the full demo on YouTube](https://www.youtube.com/watch?v=xwG7dpUtues)*
 
 ### What Makes It Different
 
