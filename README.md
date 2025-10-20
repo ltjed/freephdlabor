@@ -30,11 +30,9 @@
 
 ### See It In Action
 
-Watch how freephdlabor transforms a research idea into a complete paper:
-
 <p align="center">
   <a href="https://www.youtube.com/watch?v=xwG7dpUtues">
-    <img src="https://img.youtube.com/vi/xwG7dpUtues/maxresdefault.jpg" alt="Watch demo video" width="700">
+    <img src="https://i.ytimg.com/vi/xwG7dpUtues/maxresdefault.jpg" alt="Watch demo" width="700">
   </a>
 </p>
 
@@ -625,3 +623,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support
 
 For questions and support, please open an issue on the GitHub repository.
+
+## Citation
+
+@misc{li2025buildpersonalizedresearchgroup,
+      title={Build Your Personalized Research Group: A Multiagent Framework for Continual and Interactive Science Automation}, 
+      author={Ed Li and Junyu Ren and Xintian Pan and Cat Yan and Chuanhao Li and Dirk Bergemann and Zhuoran Yang},
+      year={2025},
+      eprint={2510.15624},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2510.15624}, 
+}
