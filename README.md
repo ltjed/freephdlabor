@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/d07f551f-a749-4235-ad0c-2e10367236d0
 | **Human-in-the-Loop** | ✅ Naturally integrates human feedback in real-time | ❌ Intervention only at fixed workflow checkpoints |
 | **Continual Research** | ✅ Context management enables sustained exploration | ❌ One-off, single-run attempts |
 
-**Learn More**: For an accessible introduction and practical guide, see our [blog post](https://freephdlabor.github.io/). For detailed architectural principles, implementation specifics, and experimental results, see our [technical report](https://arxiv.org/abs/PLACEHOLDER).
+**Learn More**: For an accessible introduction and the intuition behind the various designs, see our [blog post](https://freephdlabor.github.io/). For specifics regarding implementation, see our [technical report](https://arxiv.org/abs/2510.15624).
 
 ---
 ## 🛠️ Installation
@@ -145,7 +145,7 @@ freephdlabor/
 
 3. **Specialized Agents** - Each agent has specific capabilities:
    - **IdeationAgent**: Generates and refines research ideas
-   - **ExperimentationAgent**: Executes experiments using AI-Scientist-v2
+   - **ExperimentationAgent**: Draft code, execute experiment
    - **WriteupAgent**: Creates academic papers with LaTeX
    - **ReviewerAgent**: Reviews and provides feedback
    - **ProofreadingAgent**: Fixes typos and formatting issues
@@ -589,15 +589,6 @@ run_experiment_tool:
 - **`run_experiment_tool`**: Configures models used internally within the RunExperimentTool
 
 This demonstrates the fine-grained control available - you can use different models for different components. For example, you might use a fast, cost-effective model for main agents while using a more powerful reasoning model for experiment execution.
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **API Key Errors**: Ensure all required API keys are set in `.env`
-2. **CUDA Issues**: Check GPU availability with `nvidia-smi`
-3. **LaTeX Compilation**: Ensure LaTeX is installed for paper generation
-
 
 ## 🤝 Contributing
 
