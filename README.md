@@ -30,13 +30,9 @@
 
 ### See It In Action
 
-<p align="center">
-  <video width="700" controls>
-    <source src="assets/preview.mp4" type="video/mp4">
-  </video>
-</p>
+https://github.com/ltjed/freephdlabor/assets/preview.mp4
 
-*[Watch the full demo on YouTube](https://www.youtube.com/watch?v=xwG7dpUtues)*
+*[Watch the full 6-minute demo on YouTube](https://www.youtube.com/watch?v=xwG7dpUtues)*
 
 ### What Makes It Different
 
