@@ -30,9 +30,11 @@
 
 ### See It In Action
 
-https://github.com/ltjed/freephdlabor/raw/main/assets/preview.mp4
-
-*[Watch the full 6-minute demo on YouTube](https://www.youtube.com/watch?v=xwG7dpUtues)*
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=xwG7dpUtues">
+    <img src="https://img.youtube.com/vi/xwG7dpUtues/maxresdefault.jpg" alt="Watch demo video" width="700">
+  </a>
+</p>
 
 ### What Makes It Different
 
@@ -126,7 +128,6 @@ freephdlabor/
 │   ├── interpreters/             # Code execution environment
 │   └── config.py                 # Configuration management
 ├── external_tools/               # External tools (out-of-the-box Python functions)
-│   └── run_experiment_tool/      # Modified AI-Scientist-v2 integration
 ├── results/                      # Workspaces for each run (agents share and communicate here)
 ├── environment.yml               # Conda environment
 ├── .llm_config.yaml              # LLM configuration
@@ -623,6 +624,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For questions and support, please open an issue on the GitHub repository.
 
 ## Citation
+
+To cite, please cite our paper at https://arxiv.org/abs/2510.15624 with the following bibtex entry:
 
 @misc{li2025buildpersonalizedresearchgroup,
       title={Build Your Personalized Research Group: A Multiagent Framework for Continual and Interactive Science Automation}, 
