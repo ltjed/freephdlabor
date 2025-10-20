@@ -98,10 +98,12 @@ python launch_multiagent.py --task "investigate the effect of learning rate sche
 Or, if you have a research plan in mind...
 
 ```bash
-python launch_multiagent.py --task "Complete a full research project on developing an early warning system for grokking in neural networks.
+python launch_multiagent.py --task "Complete a full research project on detecting and predicting training phase transitions in neural networks using Hidden Markov Models (HMMs).
 
-RESEARCH OBJECTIVES: (1) Generate novel research ideas for grokking prediction, (2) Train small MLPs (2-layer, 256 hidden units) on modular arithmetic tasks (mod 67, 89, 97), (3) Monitor frequency-domain sparsity metrics by computing DFT of weights every 100 training steps, (4) Build a predictive model that can forecast grokking at least 1000 steps before validation accuracy jumps, (5) Test the predictor generalization to different architectures and tasks. Use synthetic modular arithmetic datasets that can be generated on-the-fly. The goal is to achieve greater than 95 percent prediction accuracy with significant lead time before the grokking transition. Design experiments that complete within 2 hours and provide clear metrics: prediction accuracy, lead time, and false positive rate."
+RESEARCH OBJECTIVES: (1) Generate novel research ideas for training phase detection, (2) Train a single Pythia-160M model on a small subset of data while logging detailed metrics every 10 steps, (3) Extract features like gradient norms, weight magnitudes, and activation statistics to characterize training dynamics, (4) Fit HMMs to identify distinct training phases (e.g., rapid memorization, feature learning, refinement), (5) Build a predictor that can forecast performance jumps or phase transitions at least 500 steps in advance. Use small data subsets (10K samples) to ensure fast training cycles within 2 hours. Focus on clear automated metrics: phase detection accuracy, prediction lead time, and correlation with actual performance changes. Target achieving >85% accuracy in predicting major training phase transitions."
 ```
+
+Check out an example paper at: https://github.com/ltjed/freephdlabor/blob/main/assets/example_paper.pdf
 
 ## 📁 Codebase Structure
 
