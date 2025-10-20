@@ -606,7 +606,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- The multiagent system is built on the [smolagents](https://github.com/smol-ai/smolagents) framework
+- The multiagent system is built on the [smolagents](https://github.com/huggingface/smolagents) framework
 - Incorporates a modified part of [AI-Scientist-v2](https://github.com/SakanaAI/AI-Scientist-v2) as a tool for ExperimentationAgent
 - Uses [Phoenix](https://github.com/Arize-ai/phoenix) for telemetry and monitoring
 
