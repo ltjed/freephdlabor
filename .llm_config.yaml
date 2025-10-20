@@ -1,0 +1,22 @@
+# LLM Configuration File
+# This file controls which language models are used by different components
+
+main_agents:
+  # Model for all main agents (Manager, Ideation, Experimentation, Writeup)
+  model: claude-sonnet-4-5 # Latest Claude model (released sept 29, 2025)
+
+  # Claude Extended Thinking settings (optional, only for Claude 4.x models)
+  budget_tokens: 16384  # Reasoning token budget (min: 1024, recommended: 16k+)
+
+  # # # Gemini-specific settings
+  # model: gemini-2.5-pro
+  # thinking_budget: 32768
+
+run_experiment_tool:
+  # Models for RunExperimentTool (AI-Scientist-v2 subprocess)
+  code_model: gpt-5
+  feedback_model: gpt-5
+  vlm_model: gpt-5
+  report_model: gpt-5
+  # GPT-5 specific settings
+  reasoning_effort: high  # minimal, low, medium, high

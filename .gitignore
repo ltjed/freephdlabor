@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Project-specific
+logs/
+results/
+.cache/
+cache/
+huggingface/
+
+
+# Temporary files
+*.log
+*.tmp
+temp/
+tmp/
+
+# Model files
+*.pth
+*.pt
+*.ckpt
+*.pkl
