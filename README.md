@@ -31,10 +31,12 @@
 ### See It In Action
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=xwG7dpUtues">
-    <img src="https://i.ytimg.com/vi/xwG7dpUtues/maxresdefault.jpg" alt="Watch demo" width="700">
-  </a>
+  <video width="700" controls>
+    <source src="assets/preview.mp4" type="video/mp4">
+  </video>
 </p>
+
+*[Watch the full demo on YouTube](https://www.youtube.com/watch?v=xwG7dpUtues)*
 
 ### What Makes It Different
 
