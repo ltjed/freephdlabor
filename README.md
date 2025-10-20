@@ -623,14 +623,16 @@ For questions and support, please open an issue on the GitHub repository.
 
 ## Citation
 
-To cite, please cite our paper at https://arxiv.org/abs/2510.15624 with the following bibtex entry:
+To cite this work, please cite https://arxiv.org/abs/2510.15624 with the following bibtex entry:
 
-@misc{li2025buildpersonalizedresearchgroup,
-      title={Build Your Personalized Research Group: A Multiagent Framework for Continual and Interactive Science Automation}, 
+```bibtex
+@misc{li2025freephdlabor,
+      title={Build Your Personalized Research Group: A Multiagent Framework for Continual and Interactive Science Automation},
       author={Ed Li and Junyu Ren and Xintian Pan and Cat Yan and Chuanhao Li and Dirk Bergemann and Zhuoran Yang},
       year={2025},
       eprint={2510.15624},
       archivePrefix={arXiv},
       primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2510.15624}, 
+      url={https://arxiv.org/abs/2510.15624},
 }
+```
