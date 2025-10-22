@@ -1,4 +1,8 @@
-# `freephdlabor`: customizing your own research lab to do scientific research in your field 24/7
+<p align="center">
+  <img src="assets/logo.png" alt="freephdlabor logo" width="600">
+</p>
+
+<h1 align="center">customizing your own research lab to do scientific research in your field 24/7</h1>
 
 <p align="center">
   <a href="https://freephdlabor.github.io">
@@ -10,6 +14,8 @@
   <a href="https://github.com/ltjed/freephdlabor/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
   </a>
+  <br>
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fltjed%2Ffreephdlabor&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false" alt="Visitors">
 </p>
 
 ---
@@ -103,7 +109,7 @@ python launch_multiagent.py --task "Complete a full research project on detectin
 RESEARCH OBJECTIVES: (1) Generate novel research ideas for training phase detection, (2) Train a single Pythia-160M model on a small subset of data while logging detailed metrics every 10 steps, (3) Extract features like gradient norms, weight magnitudes, and activation statistics to characterize training dynamics, (4) Fit HMMs to identify distinct training phases (e.g., rapid memorization, feature learning, refinement), (5) Build a predictor that can forecast performance jumps or phase transitions at least 500 steps in advance. Use small data subsets (10K samples) to ensure fast training cycles within 2 hours. Focus on clear automated metrics: phase detection accuracy, prediction lead time, and correlation with actual performance changes. Target achieving >85% accuracy in predicting major training phase transitions."
 ```
 
-Check out an example paper at: https://github.com/ltjed/freephdlabor/blob/main/assets/example_paper.pdf
+Check out an [example paper](https://github.com/ltjed/freephdlabor/blob/main/assets/example_paper.pdf).
 
 ## 📁 Codebase Structure
 
