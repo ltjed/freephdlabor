@@ -67,9 +67,12 @@ AVAILABLE_LLMS = [
     "vertex_ai/claude-opus-4-6",
     "vertex_ai/claude-sonnet-4-5@20250929",
     # Google Gemini models
-    "gemini-2.0-flash",
-    "gemini-2.5-flash-preview-04-17",
-    "gemini-2.5-pro-preview-03-25",
+    "gemini-3.1-pro-preview",
+    "gemini-3.1-flash-lite-preview",
+    "gemini-3-flash-preview",
+    "gemini-2.5-pro",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
 ]
 
 

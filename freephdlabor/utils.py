@@ -38,8 +38,12 @@ AVAILABLE_MODELS = [
     # grok models
     "grok-4-0709",
     # Google Gemini models
+    "gemini-3.1-pro-preview",
+    "gemini-3.1-flash-lite-preview",
+    "gemini-3-flash-preview",
     "gemini-2.5-pro",
     "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
 ]
 
 
@@ -119,10 +123,12 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
         "o3-pro-2025-06-10": 200000,
         
         # Gemini models
-        "gemini-1.5-pro": 1000000,
-        "gemini-1.5-flash": 1000000,
-        "gemini-2.5-pro": 1000000,
-        "gemini-2.5-flash": 1000000,
+        "gemini-3.1-pro-preview": 1048576,
+        "gemini-3.1-flash-lite-preview": 1048576,
+        "gemini-3-flash-preview": 1048576,
+        "gemini-2.5-pro": 1048576,
+        "gemini-2.5-flash": 1048576,
+        "gemini-2.5-flash-lite": 1048576,
         
         # DeepSeek models
         "deepseek-chat": 64000,
@@ -190,14 +196,14 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
             context_limit=context_limit,
         )
     elif "gemini" in model_name:
-        # Add thinking budget for Gemini 2.5 models
+        # Add thinking budget for thinking-capable Gemini models (3.x pro, 2.5 pro)
         extra_kwargs = {"context_limit": context_limit}
-        if "gemini-2.5-pro" in model_name:
+        if "gemini-3" in model_name or "gemini-2.5-pro" in model_name:
             extra_kwargs["thinking_budget"] = 32768
-        
+
         return LiteLLMModel(
-            model=f"gemini/{model_name}", 
-            model_id=f"gemini/{model_name}", 
+            model=f"gemini/{model_name}",
+            model_id=f"gemini/{model_name}",
             api_key=os.environ["GOOGLE_API_KEY"],
             **extra_kwargs
         )

@@ -62,14 +62,18 @@ MODEL_CONTEXT_LIMITS = {
     "o3-pro-2025-06-10": 200000,
     
     # Gemini models
-    "gemini-1.5-pro": 1000000,  # 1M tokens
-    "gemini-1.5-flash": 1000000,  # 1M tokens
-    "gemini-2.5-pro": 1000000,  # 1M tokens
-    "gemini-2.5-flash": 1000000,  # 1M tokens
-    "gemini/gemini-1.5-pro": 1000000,
-    "gemini/gemini-1.5-flash": 1000000,
-    "gemini/gemini-2.5-pro": 1000000,
-    "gemini/gemini-2.5-flash": 1000000,
+    "gemini-3.1-pro-preview": 1048576,
+    "gemini-3.1-flash-lite-preview": 1048576,
+    "gemini-3-flash-preview": 1048576,
+    "gemini-2.5-pro": 1048576,
+    "gemini-2.5-flash": 1048576,
+    "gemini-2.5-flash-lite": 1048576,
+    "gemini/gemini-3.1-pro-preview": 1048576,
+    "gemini/gemini-3.1-flash-lite-preview": 1048576,
+    "gemini/gemini-3-flash-preview": 1048576,
+    "gemini/gemini-2.5-pro": 1048576,
+    "gemini/gemini-2.5-flash": 1048576,
+    "gemini/gemini-2.5-flash-lite": 1048576,
     
     # DeepSeek models
     "deepseek-chat": 64000,
