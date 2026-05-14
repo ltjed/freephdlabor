@@ -32,9 +32,6 @@ AVAILABLE_MODELS = [
     "claude-opus-4-6",
     "claude-sonnet-4-5",
     "claude-sonnet-4-5-20250929",
-    # DeepSeek models
-    "deepseek-chat",
-    "deepseek-coder",
     # grok models
     "grok-4-0709",
     # Google Gemini models
@@ -129,12 +126,7 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
         "gemini-2.5-pro": 1048576,
         "gemini-2.5-flash": 1048576,
         "gemini-2.5-flash-lite": 1048576,
-        
-        # DeepSeek models
-        "deepseek-chat": 64000,
-        "deepseek-coder": 64000,
-        "deepseek-reasoner": 64000,
-        
+
         # Grok models
         "grok-4-0709": 128000,
     }
@@ -178,14 +170,6 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
             model=model_name,
             model_id=model_name,
             api_key=os.environ["OPENAI_API_KEY"],
-            context_limit=context_limit,
-        )
-    elif "deepseek" in model_name:
-        return LiteLLMModel(
-            model=model_name,
-            model_id=model_name,
-            api_key=os.environ["DEEPSEEK_API_KEY"],
-            api_base="https://api.deepseek.com",
             context_limit=context_limit,
         )
     elif "llama" in model_name:

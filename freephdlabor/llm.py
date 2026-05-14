@@ -28,9 +28,6 @@ AVAILABLE_LLMS = [
     "o3-mini-2025-01-31",
     "o3-2025-01-31",
     "o4-mini-2025-04-16",
-    "deepseek-coder",
-    "deepseek-reasoner",
-    "deepseek/deepseek-r1:nitro",
     "llama3.1-405b",
     # Anthropic Claude models via Amazon Bedrock
     "bedrock/anthropic.claude-opus-4-7",
@@ -80,41 +77,6 @@ def get_batch_responses_from_llm(
             stop=None,
             seed=0,
         )
-        content = [r.message.content for r in response.choices]
-        new_msg_history = [
-            new_msg_history + [{"role": "assistant", "content": c}] for c in content
-        ]
-    elif model == "deepseek-coder":
-        new_msg_history = msg_history + [{"role": "user", "content": msg}]
-        response = client.chat.completions.create(
-            model="deepseek-coder",
-            messages=[
-                {"role": "system", "content": system_message},
-                *new_msg_history,
-            ],
-            temperature=temperature,
-            max_tokens=MAX_NUM_TOKENS,
-            n=n_responses,
-            stop=None,
-        )
-        content = [r.message.content for r in response.choices]
-        new_msg_history = [
-            new_msg_history + [{"role": "assistant", "content": c}] for c in content
-        ]
-    elif model == "deepseek-reasoner":
-        new_msg_history = msg_history + [{"role": "user", "content": msg}]
-        response = client.chat.completions.create(
-            model="deepseek-reasoner",
-            messages=[
-                {"role": "system", "content": system_message},
-                *new_msg_history,
-            ],
-            temperature=temperature,
-            max_tokens=MAX_NUM_TOKENS,
-            n=n_responses,
-            stop=None,
-        )
-        reasoning_content = [r.message.reasoning_content for r in response.choices]
         content = [r.message.content for r in response.choices]
         new_msg_history = [
             new_msg_history + [{"role": "assistant", "content": c}] for c in content
@@ -245,39 +207,6 @@ def get_response_from_llm(
         )
         content = response.choices[0].message.content
         new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
-    elif model == "deepseek-coder":
-        new_msg_history = msg_history + [{"role": "user", "content": msg}]
-        response = client.chat.completions.create(
-            model="deepseek-coder",
-            messages=[
-                {"role": "system", "content": system_message},
-                *new_msg_history,
-            ],
-            temperature=temperature,
-            max_tokens=MAX_NUM_TOKENS,
-            n=1,
-            stop=None,
-        )
-        content = response.choices[0].message.content
-        new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
-    elif model in ["deepseek-reasoner", "deepseek/deepseek-r1:nitro"]:
-        new_msg_history = msg_history + [{"role": "user", "content": msg}]
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": system_message},
-                *new_msg_history,
-            ],
-            temperature=temperature,
-            max_tokens=MAX_NUM_TOKENS,
-            n=1,
-            stop=None,
-        )
-        # reasoning_content = response.choices[0].message.reasoning_content
-        # print(f"@@@\n reasoning_content is {reasoning_content}")
-        content = response.choices[0].message.content
-        print(f"@@@\n content is {content}")
-        new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
     elif model in ["meta-llama/llama-3.1-405b-instruct", "llama-3-1-405b-instruct"]:
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
         response = client.chat.completions.create(
@@ -293,21 +222,6 @@ def get_response_from_llm(
         )
         content = response.choices[0].message.content
         new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
-    # elif model == "deepseek/deepseek-reasoner":
-    #     new_msg_history = msg_history + [{"role": "user", "content": msg}]
-    #     response = client.chat.completions.create(
-    #         model=model,
-    #         messages=[
-    #             {"role": "system", "content": system_message},
-    #             *new_msg_history,
-    #         ],
-    #         temperature=temperature,
-    #         max_tokens=MAX_NUM_TOKENS,
-    #         n=1,
-    #         stop=None,
-    #     )
-    #     content = response.choices[0].message.content
-    #     new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
     else:
         raise ValueError(f"Model {model} not supported.")
 
@@ -529,23 +443,11 @@ def create_client(model):
     elif model in ["o1-preview-2024-09-12", "o1-mini-2024-09-12", "o1-2024-12-17", "o3-mini-2025-01-31",]:
         print(f"Using OpenAI API with model {model}.")
         return openai.OpenAI(), model
-    elif model in ["deepseek-coder", "deepseek-reasoner"]:
-        print(f"Using OpenAI API with {model}.")
-        return openai.OpenAI(
-            api_key=os.environ["DEEPSEEK_API_KEY"],
-            base_url="https://api.deepseek.com"
-        ), model
     elif model == "llama3.1-405b":
         print(f"Using OpenAI API with {model}.")
         return openai.OpenAI(
             api_key=os.environ["OPENROUTER_API_KEY"],
             base_url="https://openrouter.ai/api/v1"
         ), "meta-llama/llama-3.1-405b-instruct"
-    elif model == "deepseek/deepseek-r1:nitro":
-        print("Using OpenRouter API with DeepSeek Reasoner.")
-        return openai.OpenAI(
-            api_key=os.environ["OPENROUTER_API_KEY"],
-            base_url="https://openrouter.ai/api/v1"
-        ), "deepseek/deepseek-r1:nitro"
     else:
         raise ValueError(f"Model {model} not supported.")
