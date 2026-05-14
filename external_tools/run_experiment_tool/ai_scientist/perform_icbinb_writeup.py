@@ -1250,7 +1250,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         type=str,
-        default="bedrock/anthropic.claude-3-5-sonnet-20240620-v1:0",
+        default="bedrock/anthropic.claude-sonnet-4-6",
         choices=AVAILABLE_LLMS,
         help="Model to use for citation collection (small model).",
     )

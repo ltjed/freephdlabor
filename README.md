@@ -347,7 +347,7 @@ from my_custom_system import initialize_my_custom_system
 def main():
     """Main entry point for your custom multiagent system."""
     parser = argparse.ArgumentParser(description="Custom Multiagent Research System")
-    parser.add_argument("--model", type=str, default="gpt-5", help="LLM model to use")
+    parser.add_argument("--model", type=str, default="gpt-5.5", help="LLM model to use")
     parser.add_argument("--workspace", type=str, default="my_research", help="Workspace directory")
     parser.add_argument("--task", type=str, help="Research task to execute")
     args = parser.parse_args()
@@ -557,8 +557,8 @@ Options:
   --model <string>              LLM model to use
   --interpreter <string>        Python interpreter path
   --debug                       Enable debug logging
-  --reasoning-effort <string>   GPT-5 reasoning effort: minimal|low|medium|high
-  --verbosity <string>          GPT-5 verbosity: low|medium|high
+  --reasoning-effort <string>   GPT-5.x reasoning effort: minimal|low|medium|high
+  --verbosity <string>          GPT-5.x verbosity: low|medium|high
   --callback-host <string>      Callback server host
   --callback-port <integer>     Callback server port
   --task <string>               Research task description
@@ -580,14 +580,14 @@ The configuration file provides fine-grained control over which models are used 
 
 ```yaml
 main_agents:
-  model: gemini-2.5-pro
-  thinking_budget: 32768
+  model: claude-opus-4-7
+  budget_tokens: 16384
 
 run_experiment_tool:
-  code_model: gpt-5
-  feedback_model: gpt-5
-  vlm_model: gpt-5
-  report_model: gpt-5
+  code_model: gpt-5.5
+  feedback_model: gpt-5.5
+  vlm_model: gpt-5.5
+  report_model: gpt-5.5
   reasoning_effort: high
 ```
 
