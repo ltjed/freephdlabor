@@ -12,7 +12,7 @@ The arguments may or may not contain the following:
 - If a results_dir is provided, skip to Step 2 with that directory
 - Otherwise, run the multi-agent system:
 ```bash
-eval "$(conda shell.bash hook)" && conda activate freephdlabor && export $(cat .env | grep -v '^#' | xargs) && python launch_multiagent.py --model o4-mini-2025-04-16 2>&1 | tee logs/output_$(date +%Y%m%d_%H%M%S).log
+eval "$(conda shell.bash hook)" && conda activate freephdlabor && export $(cat .env | grep -v '^#' | xargs) && python launch_multiagent.py --model gpt-5.5 2>&1 | tee logs/output_$(date +%Y%m%d_%H%M%S).log
 ```
 
 ### Step 2: Analyze Results

@@ -6,13 +6,20 @@ from smolagents import LiteLLMModel
 
 # Available models
 AVAILABLE_MODELS = [
-    # OpenAI GPT-5 models (latest)
+    # OpenAI GPT-5.x models (latest)
+    "gpt-5.5",
+    "gpt-5.5-pro",
+    "gpt-5.4",
+    "gpt-5.4-mini",
+    "gpt-5.4-nano",
+    "gpt-5.3-chat-latest",
+    "gpt-5.2",
+    "gpt-5.2-pro",
+    "gpt-5.1",
     "gpt-5",
-    "gpt-5-mini", 
+    "gpt-5-mini",
     "gpt-5-nano",
-    # OpenAI models
-    "gpt-4o",
-    "gpt-4.1-mini-2025-04-14",
+    "gpt-5-pro",
     # OpenAI reasoning models
     "o4-mini-2025-04-16",
     "o3-2025-04-16",
@@ -90,24 +97,26 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
         "claude-sonnet-4-5": 200000,
         "claude-sonnet-4-5-20250929": 200000,
         
-        # OpenAI GPT-5 models (context window: 256K input, 128K output including reasoning tokens)
-        "gpt-5": 256000,
-        "gpt-5-mini": 256000, 
-        "gpt-5-nano": 256000,
-        
-        # OpenAI models
-        "gpt-4o": 128000,
-        "gpt-4o-mini": 128000,
-        "gpt-4-turbo": 128000,
-        "gpt-4": 8192,
-        "gpt-3.5-turbo": 16385,
-        "o1-preview": 128000,
-        "o1-mini": 128000,
+        # OpenAI GPT-5.x models (per LiteLLM model registry, May 2026)
+        "gpt-5.5": 1050000,
+        "gpt-5.5-pro": 1050000,
+        "gpt-5.4": 1050000,
+        "gpt-5.4-mini": 272000,
+        "gpt-5.4-nano": 272000,
+        "gpt-5.3-chat-latest": 128000,
+        "gpt-5.2": 272000,
+        "gpt-5.2-pro": 272000,
+        "gpt-5.1": 272000,
+        "gpt-5": 272000,
+        "gpt-5-mini": 272000,
+        "gpt-5-nano": 272000,
+        "gpt-5-pro": 272000,
+        # OpenAI reasoning models
         "o3-mini": 128000,
         "o3-2025-04-16": 200000,
         "o4-mini": 128000,
-        "gpt-4.1-mini-2025-04-14": 128000,
-        "o4-mini-2025-04-16": 128000,
+        "o4-mini-2025-04-16": 200000,
+        "o3-pro-2025-06-10": 200000,
         
         # Gemini models
         "gemini-1.5-pro": 1000000,

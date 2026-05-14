@@ -14,9 +14,9 @@ main_agents:
 
 run_experiment_tool:
   # Models for RunExperimentTool (AI-Scientist-v2 subprocess)
-  code_model: gpt-5
-  feedback_model: gpt-5
-  vlm_model: gpt-5
-  report_model: gpt-5
-  # GPT-5 specific settings
+  code_model: gpt-5.5
+  feedback_model: gpt-5.5
+  vlm_model: gpt-5.5
+  report_model: gpt-5.5
+  # GPT-5 specific settings (also apply to gpt-5.x)
   reasoning_effort: high  # minimal, low, medium, high

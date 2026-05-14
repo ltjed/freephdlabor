@@ -134,7 +134,7 @@ def run_aggregator_script(
 
 
 def aggregate_plots(
-    base_folder: str, model: str = "o1-2024-12-17", n_reflections: int = 5
+    base_folder: str, model: str = "gpt-5.5", n_reflections: int = 5
 ) -> None:
     filename = "auto_plot_aggregator.py"
     aggregator_script_path = os.path.join(base_folder, filename)
@@ -265,8 +265,8 @@ def main():
     )
     parser.add_argument(
         "--model",
-        default="o1-2024-12-17",
-        help="LLM model to use (default: o1-2024-12-17).",
+        default="gpt-5.5",
+        help="LLM model to use (default: gpt-5.5).",
     )
     parser.add_argument(
         "--reflections",

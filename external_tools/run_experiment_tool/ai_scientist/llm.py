@@ -18,10 +18,20 @@ AVAILABLE_LLMS = [
     "claude-opus-4-6",
     "claude-sonnet-4-5",
     "claude-sonnet-4-5-20250929",
-    # OpenAI GPT-5 models (latest)
+    # OpenAI GPT-5.x models (latest)
+    "gpt-5.5",
+    "gpt-5.5-pro",
+    "gpt-5.4",
+    "gpt-5.4-mini",
+    "gpt-5.4-nano",
+    "gpt-5.3-chat-latest",
+    "gpt-5.2",
+    "gpt-5.2-pro",
+    "gpt-5.1",
     "gpt-5",
     "gpt-5-mini",
     "gpt-5-nano",
+    "gpt-5-pro",
     # OpenAI models
     "gpt-4o-mini",
     "gpt-4o-mini-2024-07-18",
