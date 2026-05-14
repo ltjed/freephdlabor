@@ -16,9 +16,13 @@
   </a>
 </p>
 
+<h3 align="center">The first multiagent system to produce peer-reviewed research end-to-end.</h3>
+
+<p align="center">Check out the accepted papers:</p>
+
 <p align="center">
-  <strong>The first multiagent system to produce peer-reviewed research end-to-end.</strong><br>
-  <a href="https://openreview.net/pdf?id=i31cKXiyim">Unlocking Hierarchical Concept Discovery in Language Models Through Geometric Regularization</a> ·
+  <a href="https://openreview.net/pdf?id=i31cKXiyim">Unlocking Hierarchical Concept Discovery in Language Models Through Geometric Regularization</a>
+  <br>
   <a href="https://arxiv.org/pdf/2510.08855">Time-Aware Feature Selection: Adaptive Temporal Masking for Stable Sparse Autoencoder Training</a>
 </p>
 
