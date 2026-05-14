@@ -2,7 +2,8 @@
   <img src="assets/logo.png" alt="freephdlabor logo" width="600">
 </p>
 
-<h1 align="center">customizing your own research lab to do scientific research in your field 24/7</h1>
+<h1 align="center">The first multiagent system to produce peer-reviewed research end-to-end.</h1>
+<h3 align="center">customizing your own research lab to do scientific research in your field 24/7</h3>
 
 <p align="center">
   <a href="https://freephdlabor.github.io">
@@ -16,15 +17,7 @@
   </a>
 </p>
 
-<h3 align="center">The first multiagent system to produce peer-reviewed research end-to-end.</h3>
 
-<p align="center">Check out the accepted papers:</p>
-
-<p align="center">
-  <a href="https://openreview.net/pdf?id=i31cKXiyim">Unlocking Hierarchical Concept Discovery in Language Models Through Geometric Regularization</a>
-  <br>
-  <a href="https://arxiv.org/pdf/2510.08855">Time-Aware Feature Selection: Adaptive Temporal Masking for Stable Sparse Autoencoder Training</a>
-</p>
 
 ---
 
