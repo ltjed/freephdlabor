@@ -18,8 +18,11 @@ AVAILABLE_MODELS = [
     "o3-2025-04-16",
     "o3-pro-2025-06-10",
     # Claude models (Anthropic)
-    "claude-opus-4-20250514",
-    "claude-sonnet-4-20250514",
+    "claude-opus-4-7",
+    "claude-sonnet-4-6",
+    "claude-haiku-4-5",
+    "claude-haiku-4-5-20251001",
+    "claude-opus-4-6",
     "claude-sonnet-4-5",
     "claude-sonnet-4-5-20250929",
     # DeepSeek models
@@ -77,15 +80,13 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
     # Model context limits for fallback detection
     # These will be passed as custom attributes to LiteLLMModel via **kwargs
     model_context_limits = {
-        # Claude models
-        "claude-3-5-sonnet-20241022": 200000,
-        "claude-3-5-sonnet-20240620": 200000,
-        "claude-3-5-haiku-20241022": 200000,
-        "claude-3-opus-20240229": 200000,
-        "claude-3-sonnet-20240229": 200000,
-        "claude-3-haiku-20240307": 200000,
-        "claude-sonnet-4-20250514": 200000,
-        "claude-opus-4-20250514": 200000,
+        # Claude models — current generation
+        "claude-opus-4-7": 1000000,
+        "claude-sonnet-4-6": 1000000,
+        "claude-haiku-4-5": 200000,
+        "claude-haiku-4-5-20251001": 200000,
+        # Claude models — legacy (still callable)
+        "claude-opus-4-6": 1000000,
         "claude-sonnet-4-5": 200000,
         "claude-sonnet-4-5-20250929": 200000,
         

@@ -11,8 +11,13 @@ import openai
 MAX_NUM_TOKENS = 4096
 
 AVAILABLE_LLMS = [
-    "claude-3-5-sonnet-20240620",
-    "claude-3-5-sonnet-20241022",
+    "claude-opus-4-7",
+    "claude-sonnet-4-6",
+    "claude-haiku-4-5",
+    "claude-haiku-4-5-20251001",
+    "claude-opus-4-6",
+    "claude-sonnet-4-5",
+    "claude-sonnet-4-5-20250929",
     # OpenAI GPT-5 models (latest)
     "gpt-5",
     "gpt-5-mini",
@@ -40,17 +45,17 @@ AVAILABLE_LLMS = [
     # Llama 3 models
     "llama3.1-405b",
     # Anthropic Claude models via Amazon Bedrock
-    "bedrock/anthropic.claude-3-sonnet-20240229-v1:0",
-    "bedrock/anthropic.claude-3-5-sonnet-20240620-v1:0",
-    "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0",
-    "bedrock/anthropic.claude-3-haiku-20240307-v1:0",
-    "bedrock/anthropic.claude-3-opus-20240229-v1:0",
+    "bedrock/anthropic.claude-opus-4-7",
+    "bedrock/anthropic.claude-sonnet-4-6",
+    "bedrock/anthropic.claude-haiku-4-5-20251001-v1:0",
+    "bedrock/anthropic.claude-opus-4-6-v1",
+    "bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0",
     # Anthropic Claude models Vertex AI
-    "vertex_ai/claude-3-opus@20240229",
-    "vertex_ai/claude-3-5-sonnet@20240620",
-    "vertex_ai/claude-3-5-sonnet@20241022",
-    "vertex_ai/claude-3-sonnet@20240229",
-    "vertex_ai/claude-3-haiku@20240307",
+    "vertex_ai/claude-opus-4-7",
+    "vertex_ai/claude-sonnet-4-6",
+    "vertex_ai/claude-haiku-4-5@20251001",
+    "vertex_ai/claude-opus-4-6",
+    "vertex_ai/claude-sonnet-4-5@20250929",
     # Google Gemini models
     "gemini-2.0-flash",
     "gemini-2.5-flash-preview-04-17",

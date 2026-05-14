@@ -21,26 +21,21 @@ from smolagents.monitoring import Timing
 
 # Model context limits mapping (input tokens)
 MODEL_CONTEXT_LIMITS = {
-    # Claude models
-    "claude-3-5-sonnet-20241022": 200000,
-    "claude-3-5-sonnet-20240620": 200000,
-    "claude-3-5-haiku-20241022": 200000,
-    "claude-3-opus-20240229": 200000,
-    "claude-3-sonnet-20240229": 200000,
-    "claude-3-haiku-20240307": 200000,
-    "claude-sonnet-4-20250514": 200000,
-    "claude-opus-4": 200000,
+    # Claude models — current generation
+    "claude-opus-4-7": 1000000,
+    "claude-sonnet-4-6": 1000000,
+    "claude-haiku-4-5": 200000,
+    "claude-haiku-4-5-20251001": 200000,
+    # Claude models — legacy (still callable)
+    "claude-opus-4-6": 1000000,
     "claude-sonnet-4-5": 200000,
     "claude-sonnet-4-5-20250929": 200000,
     # Anthropic prefixed versions (for LiteLLM routing)
-    "anthropic/claude-3-5-sonnet-20241022": 200000,
-    "anthropic/claude-3-5-sonnet-20240620": 200000,
-    "anthropic/claude-3-5-haiku-20241022": 200000,
-    "anthropic/claude-3-opus-20240229": 200000,
-    "anthropic/claude-3-sonnet-20240229": 200000,
-    "anthropic/claude-3-haiku-20240307": 200000,
-    "anthropic/claude-sonnet-4-20250514": 200000,
-    "anthropic/claude-opus-4": 200000,
+    "anthropic/claude-opus-4-7": 1000000,
+    "anthropic/claude-sonnet-4-6": 1000000,
+    "anthropic/claude-haiku-4-5": 200000,
+    "anthropic/claude-haiku-4-5-20251001": 200000,
+    "anthropic/claude-opus-4-6": 1000000,
     "anthropic/claude-sonnet-4-5": 200000,
     "anthropic/claude-sonnet-4-5-20250929": 200000,
 

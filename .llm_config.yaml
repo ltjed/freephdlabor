@@ -3,7 +3,7 @@
 
 main_agents:
   # Model for all main agents (Manager, Ideation, Experimentation, Writeup)
-  model: claude-sonnet-4-5 # Latest Claude model (released sept 29, 2025)
+  model: claude-opus-4-7 # Claude Opus 4.7 — current flagship as of May 2026
 
   # Claude Extended Thinking settings (optional, only for Claude 4.x models)
   budget_tokens: 16384  # Reasoning token budget (min: 1024, recommended: 16k+)
