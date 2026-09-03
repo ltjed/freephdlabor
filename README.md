@@ -350,7 +350,7 @@ from my_custom_system import initialize_my_custom_system
 def main():
     """Main entry point for your custom multiagent system."""
     parser = argparse.ArgumentParser(description="Custom Multiagent Research System")
-    parser.add_argument("--model", type=str, default="gpt-5.5", help="LLM model to use")
+    parser.add_argument("--model", type=str, default="gpt-5.6", help="LLM model to use")
     parser.add_argument("--workspace", type=str, default="my_research", help="Workspace directory")
     parser.add_argument("--task", type=str, help="Research task to execute")
     args = parser.parse_args()
@@ -583,14 +583,14 @@ The configuration file provides fine-grained control over which models are used 
 
 ```yaml
 main_agents:
-  model: claude-opus-4-7
+  model: claude-opus-5
   budget_tokens: 16384
 
 run_experiment_tool:
-  code_model: gpt-5.5
-  feedback_model: gpt-5.5
-  vlm_model: gpt-5.5
-  report_model: gpt-5.5
+  code_model: gpt-5.6
+  feedback_model: gpt-5.6
+  vlm_model: gpt-5.6
+  report_model: gpt-5.6
   reasoning_effort: high
 ```
 

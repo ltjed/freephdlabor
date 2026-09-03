@@ -33,22 +33,22 @@ class RunExperimentTool(Tool):
         },
         "code_model": {
             "type": "string",
-            "description": "LLM model to use for code generation (default: from RUN_EXPERIMENT_CODE_MODEL env or 'gpt-5.5')",
+            "description": "LLM model to use for code generation (default: from RUN_EXPERIMENT_CODE_MODEL env or 'gpt-5.6')",
             "nullable": True
         },
         "feedback_model": {
             "type": "string",
-            "description": "LLM model to use for feedback and evaluation (default: from RUN_EXPERIMENT_FEEDBACK_MODEL env or 'gpt-5.5')",
+            "description": "LLM model to use for feedback and evaluation (default: from RUN_EXPERIMENT_FEEDBACK_MODEL env or 'gpt-5.6')",
             "nullable": True
         },
         "vlm_model": {
             "type": "string",
-            "description": "VLM model to use for visual feedback on plots (default: from RUN_EXPERIMENT_VLM_MODEL env or 'gpt-5.5')",
+            "description": "VLM model to use for visual feedback on plots (default: from RUN_EXPERIMENT_VLM_MODEL env or 'gpt-5.6')",
             "nullable": True
         },
         "report_model": {
             "type": "string",
-            "description": "LLM model to use for report generation (default: from RUN_EXPERIMENT_REPORT_MODEL env or 'gpt-5.5')",
+            "description": "LLM model to use for report generation (default: from RUN_EXPERIMENT_REPORT_MODEL env or 'gpt-5.6')",
             "nullable": True
         },
         "end_stage": {
@@ -127,10 +127,10 @@ class RunExperimentTool(Tool):
         This allows configuration via .llm_config.yaml file.
         """
         # Read models from environment if not provided
-        code_model = code_model or os.environ.get('RUN_EXPERIMENT_CODE_MODEL', 'gpt-5.5')
-        feedback_model = feedback_model or os.environ.get('RUN_EXPERIMENT_FEEDBACK_MODEL', 'gpt-5.5')
-        vlm_model = vlm_model or os.environ.get('RUN_EXPERIMENT_VLM_MODEL', 'gpt-5.5')
-        report_model = report_model or os.environ.get('RUN_EXPERIMENT_REPORT_MODEL', 'gpt-5.5')
+        code_model = code_model or os.environ.get('RUN_EXPERIMENT_CODE_MODEL', 'gpt-5.6')
+        feedback_model = feedback_model or os.environ.get('RUN_EXPERIMENT_FEEDBACK_MODEL', 'gpt-5.6')
+        vlm_model = vlm_model or os.environ.get('RUN_EXPERIMENT_VLM_MODEL', 'gpt-5.6')
+        report_model = report_model or os.environ.get('RUN_EXPERIMENT_REPORT_MODEL', 'gpt-5.6')
         
         # Validate and set end_stage parameter
         end_stage = end_stage or 4

@@ -742,7 +742,7 @@ def filter_experiment_summaries(exp_summaries, step_name):
     return filtered_summaries
 
 
-def gather_citations(base_folder, num_cite_rounds=20, small_model="gpt-5.5"):
+def gather_citations(base_folder, num_cite_rounds=20, small_model="gpt-5.6"):
     """
     Gather citations for a paper, with ability to resume from previous progress.
 
@@ -859,8 +859,8 @@ def perform_writeup(
     citations_text=None,
     no_writing=False,
     num_cite_rounds=20,
-    small_model="gpt-5.5",
-    big_model="gpt-5.5",
+    small_model="gpt-5.6",
+    big_model="gpt-5.6",
     n_writeup_reflections=3,
     page_limit=4,
 ):
@@ -950,7 +950,7 @@ def perform_writeup(
 
         # Generate VLM-based descriptions
         try:
-            vlm_client, vlm_model = create_vlm_client("gpt-5.5")
+            vlm_client, vlm_model = create_vlm_client("gpt-5.6")
             desc_map = {}
             for pf in plot_names:
                 ppath = osp.join(figures_dir, pf)
@@ -1257,7 +1257,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--big-model",
         type=str,
-        default="gpt-5.5",
+        default="gpt-5.6",
         choices=AVAILABLE_LLMS,
         help="Model to use for final writeup (big model).",
     )

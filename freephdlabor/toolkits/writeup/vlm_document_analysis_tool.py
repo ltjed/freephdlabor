@@ -99,7 +99,7 @@ class VLMDocumentAnalysisTool(Tool):
             working_dir: Working directory for workspace-aware file access
         """
         super().__init__()
-        self.vlm_model = "gpt-5.5"
+        self.vlm_model = "gpt-5.6"
         # Convert to absolute path to prevent nested directory issues
         self.working_dir = os.path.abspath(working_dir) if working_dir else None
         

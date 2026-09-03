@@ -273,7 +273,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         type=str,
-        default="gpt-5.5",
+        default="gpt-5.6",
         choices=AVAILABLE_LLMS,
         help="Model to use for AI Scientist.",
     )

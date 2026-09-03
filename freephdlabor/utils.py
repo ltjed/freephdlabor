@@ -7,6 +7,10 @@ from smolagents import LiteLLMModel
 # Available models
 AVAILABLE_MODELS = [
     # OpenAI GPT-5.x models (latest)
+    "gpt-5.6",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-5.6-luna",
     "gpt-5.5",
     "gpt-5.5-pro",
     "gpt-5.4",
@@ -25,6 +29,9 @@ AVAILABLE_MODELS = [
     "o3-2025-04-16",
     "o3-pro-2025-06-10",
     # Claude models (Anthropic)
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "claude-fable-5-1",
     "claude-opus-4-7",
     "claude-sonnet-4-6",
     "claude-haiku-4-5",
@@ -89,6 +96,9 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
     # These will be passed as custom attributes to LiteLLMModel via **kwargs
     model_context_limits = {
         # Claude models — current generation
+        "claude-opus-5": 1000000,
+        "claude-sonnet-5": 1000000,
+        "claude-fable-5-1": 1000000,
         "claude-opus-4-7": 1000000,
         "claude-sonnet-4-6": 1000000,
         "claude-haiku-4-5": 200000,
@@ -98,7 +108,11 @@ def create_model(model_name, reasoning_effort="medium", verbosity="medium", budg
         "claude-sonnet-4-5": 200000,
         "claude-sonnet-4-5-20250929": 200000,
         
-        # OpenAI GPT-5.x models (per LiteLLM model registry, May 2026)
+        # OpenAI GPT-5.x models (latest)
+        "gpt-5.6": 1050000,
+        "gpt-5.6-sol": 1050000,
+        "gpt-5.6-terra": 1050000,
+        "gpt-5.6-luna": 1050000,
         "gpt-5.5": 1050000,
         "gpt-5.5-pro": 1050000,
         "gpt-5.4": 1050000,

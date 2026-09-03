@@ -22,6 +22,9 @@ from smolagents.monitoring import Timing
 # Model context limits mapping (input tokens)
 MODEL_CONTEXT_LIMITS = {
     # Claude models — current generation
+    "claude-opus-5": 1000000,
+    "claude-sonnet-5": 1000000,
+    "claude-fable-5-1": 1000000,
     "claude-opus-4-7": 1000000,
     "claude-sonnet-4-6": 1000000,
     "claude-haiku-4-5": 200000,
@@ -39,7 +42,11 @@ MODEL_CONTEXT_LIMITS = {
     "anthropic/claude-sonnet-4-5": 200000,
     "anthropic/claude-sonnet-4-5-20250929": 200000,
 
-    # OpenAI GPT-5.x models (per LiteLLM model registry, May 2026)
+    # OpenAI GPT-5.x models (latest)
+    "gpt-5.6": 1050000,
+    "gpt-5.6-sol": 1050000,
+    "gpt-5.6-terra": 1050000,
+    "gpt-5.6-luna": 1050000,
     "gpt-5.5": 1050000,
     "gpt-5.5-pro": 1050000,
     "gpt-5.4": 1050000,

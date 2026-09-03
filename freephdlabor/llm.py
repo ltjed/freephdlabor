@@ -11,6 +11,9 @@ import openai
 MAX_NUM_TOKENS = 4096
 
 AVAILABLE_LLMS = [
+    "claude-fable-5-1",
+    "claude-opus-5",
+    "claude-sonnet-5",
     "claude-opus-4-7",
     "claude-sonnet-4-6",
     "claude-haiku-4-5",
@@ -18,6 +21,10 @@ AVAILABLE_LLMS = [
     "claude-opus-4-6",
     "claude-sonnet-4-5",
     "claude-sonnet-4-5-20250929",
+    "gpt-5.6",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-5.6-luna",
     "gpt-4o-mini-2024-07-18",
     "gpt-4o-mini",
     "gpt-4o-2024-05-13",
@@ -60,6 +67,10 @@ def get_batch_responses_from_llm(
         msg_history = []
 
     if model in [
+        "gpt-5.6",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
         "gpt-4o-2024-05-13",
         "gpt-4o-mini-2024-07-18",
         "gpt-4o-2024-08-06",
@@ -171,6 +182,10 @@ def get_response_from_llm(
             }
         ]
     elif model in [
+        "gpt-5.6",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
         "gpt-4o-2024-05-13",
         "gpt-4o-mini-2024-07-18",
         "gpt-4o-2024-08-06",
@@ -377,7 +392,7 @@ def get_response_from_vlm(
     messages.extend(new_msg_history)
     
     # Make API call (currently only supports OpenAI-compatible VLMs)
-    if "gpt-4o" in model or "gpt-4-vision" in model:
+    if "gpt-4o" in model or "gpt-4-vision" in model or model.startswith("gpt-5.5") or model.startswith("gpt-5.6"):
         response = client.chat.completions.create(
             model=model,
             messages=messages,
@@ -406,23 +421,23 @@ def get_response_from_vlm(
     return content_response, new_msg_history
 
 
-def create_vlm_client(model: str = "gpt-4o-2024-05-13"):
+def create_vlm_client(model: str = "gpt-5.6"):
     """
     Create a VLM client for vision tasks.
     
     Args:
-        model: VLM model name (defaults to GPT-4o)
+        model: VLM model name (defaults to GPT-5.6)
         
     Returns:
         Tuple of (client, model_name)
     """
-    if "gpt-4o" in model or "gpt-4-vision" in model:
+    if "gpt-4o" in model or "gpt-4-vision" in model or model.startswith("gpt-5.5") or model.startswith("gpt-5.6"):
         print(f"Using OpenAI VLM API with model {model}.")
         return openai.OpenAI(), model
     else:
-        # Default to GPT-4o if unsupported model
-        print(f"Model {model} not supported for VLM. Defaulting to gpt-4o-2024-05-13.")
-        return openai.OpenAI(), "gpt-4o-2024-05-13"
+        # Default to GPT-5.6 if unsupported model
+        print(f"Model {model} not supported for VLM. Defaulting to gpt-5.6.")
+        return openai.OpenAI(), "gpt-5.6"
 
 
 def create_client(model):

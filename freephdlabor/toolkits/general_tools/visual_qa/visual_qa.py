@@ -164,7 +164,7 @@ def visualizer(image_path: str, question: str | None = None) -> str:
     base64_image = encode_image(image_path)
 
     payload = {
-        "model": "gpt-5.5",
+        "model": "gpt-5.6",
         "messages": [
             {
                 "role": "user",

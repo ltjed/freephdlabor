@@ -85,19 +85,19 @@ def parse_arguments():
     parser.add_argument(
         "--model_agg_plots",
         type=str,
-        default="gpt-5.5",
+        default="gpt-5.6",
         help="Model to use for plot aggregation",
     )
     parser.add_argument(
         "--model_writeup",
         type=str,
-        default="gpt-5.5",
+        default="gpt-5.6",
         help="Model to use for writeup",
     )
     parser.add_argument(
         "--model_citation",
         type=str,
-        default="gpt-5.5",
+        default="gpt-5.6",
         help="Model to use for citation gathering",
     )
     parser.add_argument(
@@ -109,7 +109,7 @@ def parse_arguments():
     parser.add_argument(
         "--model_review",
         type=str,
-        default="gpt-5.5",
+        default="gpt-5.6",
         help="Model to use for review main text and captions",
     )
     parser.add_argument(
